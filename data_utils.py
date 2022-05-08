@@ -141,8 +141,8 @@ def get_appropriate_dataset(data, tokenizer_name='bert-base-uncased'):
     return dataset
 
 
-def set_up_data_loader():
-    with open(f"mosi.pkl", "rb") as handle:
+def set_up_data_loader(file_name):
+    with open(file_name, "rb") as handle:
         data = pickle.load(handle)
 
     train_data = data["train"]
